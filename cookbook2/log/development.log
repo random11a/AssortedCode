@@ -1,0 +1,84 @@
+  [4;36;1mSQL (0.000197)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.002081)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001664)[0m   [0mSHOW FIELDS FROM categories[0m
+
+
+Processing CategoryController#index (for 127.0.0.1 at 2009-06-20 01:04:54) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;36;1mSQL (0.000203)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001620)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000493)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000171)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/category
+Rendering category/list
+Completed in 0.19438 (5 reqs/sec) | Rendering: 0.00408 (2%) | DB: 0.00249 (1%) | 200 OK [http://localhost/category]
+
+
+Processing CategoryController#new (for 127.0.0.1 at 2009-06-20 01:05:14) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.010790)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendering  within layouts/category
+Rendering category/new
+Rendered category/_form (0.00073)
+Completed in 0.07906 (12 reqs/sec) | Rendering: 0.06386 (80%) | DB: 0.01079 (13%) | 200 OK [http://localhost/category/new]
+
+
+Processing RecipeController#index (for 127.0.0.1 at 2009-06-20 01:05:28) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;35;1mRecipe Columns (0.011019)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000566)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000222)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/recipe
+Rendering recipe/list
+Completed in 0.02095 (47 reqs/sec) | Rendering: 0.00431 (20%) | DB: 0.01181 (56%) | 200 OK [http://localhost/recipe]
+
+
+Processing CategoryController#create (for 127.0.0.1 at 2009-06-20 01:05:40) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>""}, "action"=>"create", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.484299)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000145)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000359)[0m   [0;1mINSERT INTO categories (`name`) VALUES('')[0m
+  [4;35;1mSQL (0.000946)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/category/list
+Completed in 0.49352 (2 reqs/sec) | DB: 0.48575 (98%) | 302 Found [http://localhost/category/create]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 01:05:41) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;36;1mCategory Columns (0.001598)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mSQL (0.000572)[0m   [0mSELECT count(*) AS count_all FROM categories [0m
+  [4;36;1mCategory Load (0.000172)[0m   [0;1mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/category
+Rendering category/list
+Completed in 0.00989 (101 reqs/sec) | Rendering: 0.00268 (27%) | DB: 0.00234 (23%) | 200 OK [http://localhost/category/list]
+
+
+Processing RecipeController#index (for 127.0.0.1 at 2009-06-20 01:05:54) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;35;1mRecipe Columns (0.011052)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000685)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000181)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/recipe
+Rendering recipe/list
+Completed in 0.01963 (50 reqs/sec) | Rendering: 0.00294 (15%) | DB: 0.01192 (60%) | 200 OK [http://localhost/recipe]
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 01:05:55) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.010927)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipe
+Rendering recipe/new
+Rendered recipe/_form (0.00328)
+Completed in 0.02194 (45 reqs/sec) | Rendering: 0.00663 (30%) | DB: 0.01093 (49%) | 200 OK [http://localhost/recipe/new]
