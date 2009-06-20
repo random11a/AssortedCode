@@ -1,6 +1,5 @@
-<h1>Listing categories</h1>
 
-<table>
+<table border="1">
   <tr>
   <% for column in Category.content_columns %>
     <th><%= column.human_name %></th>
@@ -9,19 +8,9 @@
   
 <% for category in @categories %>
   <tr>
-  <% for column in Category.content_columns %>
-    <td><%=h category.send(column.name) %></td>
-  <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => category %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => category %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => category }, :confirm => 'Are you sure?', :method => :post %></td>
-  </tr>
+	<td><%= link_to %Q{#{category.send(column.name)}}, :action => 'show', :id => category %> 
+	
+	<%= link_to '(delete)', { :action => 'destroy', :id => category }, 
+                    :confirm => 'Are you sure?', :post => true %></td>
 <% end %>
 </table>
-
-<%= link_to 'Previous page', { :page => @category_pages.current.previous } if @category_pages.current.previous %>
-<%= link_to 'Next page', { :page => @category_pages.current.next } if @category_pages.current.next %> 
-
-<br />
-
-<%= link_to 'New category', :action => 'new' %>

@@ -1,27 +1,19 @@
-<h1>Listing recipes</h1>
-
-<table>
-  <tr>
-  <% for column in Recipe.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
-  </tr>
-  
-<% for recipe in @recipes %>
-  <tr>
-  <% for column in Recipe.content_columns %>
-    <td><%=h recipe.send(column.name) %></td>
-  <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => recipe %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => recipe %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => recipe }, :confirm => 'Are you sure?', :method => :post %></td>
-  </tr>
-<% end %>
+<table border="1"> 
+  <tr> 
+    <th width="60%"><em>Recipe</em</th> 
+    <th width="20%"><em>Category</em></th> 
+    <th width="20%"><em>Date</em</th> 
+  </tr> 
+ 
+<% for recipe in @recipes %> 
+  <tr> 
+    <td><%= link_to %Q{#{recipe.title}}, :action => 'show', :id => recipe %> 
+        <%= link_to '(delete)', { :action => 'destroy', :id => recipe }, 
+                               
+  :confirm => 'Are you sure?', :post => true %></td> 
+    <td><%= link_to %Q{#{recipe.category.name}}, 
+                   {:action => 'list', :category_id => recipe.category.id} %></td> 
+    <td><%=h recipe.date %></td> 
+  </tr> 
+<% end %> 
 </table>
-
-<%= link_to 'Previous page', { :page => @recipe_pages.current.previous } if @recipe_pages.current.previous %>
-<%= link_to 'Next page', { :page => @recipe_pages.current.next } if @recipe_pages.current.next %> 
-
-<br />
-
-<%= link_to 'New recipe', :action => 'new' %>

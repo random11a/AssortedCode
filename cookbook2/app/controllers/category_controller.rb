@@ -45,7 +45,10 @@ class CategoryController < ApplicationController
   end
 
   def destroy
-    Category.find(params[:id]).destroy
+    recipes = Recipe.find(:all, :conditions => ["category_id = ?", params[:id]])
+    if recipes.empty?
+      Category.find(params[:id]).destroy
+    end
     redirect_to :action => 'list'
   end
 end

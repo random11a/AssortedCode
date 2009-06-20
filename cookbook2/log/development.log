@@ -558,3 +558,663 @@ DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (
 Rendering  within layouts/recipe
 Rendering recipe/list
 Completed in 0.00932 (107 reqs/sec) | Rendering: 0.00274 (29%) | DB: 0.00204 (21%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:33:40) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000178)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.001787)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000148)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001528)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000404)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.03707 (26 reqs/sec) | Rendering: 0.00948 (25%) | DB: 0.00428 (11%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#index (for 127.0.0.1 at 2009-06-20 11:42:04) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000212)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011113)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000201)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering recipe/list
+  [4;36;1mCategory Columns (0.001501)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000238)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.05737 (17 reqs/sec) | Rendering: 0.01335 (23%) | DB: 0.01349 (23%) | 200 OK [http://localhost/recipe]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:42:07) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.047395)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.062263)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000190)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.038737)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.083129)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.24701 (4 reqs/sec) | Rendering: 0.01007 (4%) | DB: 0.23171 (93%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:42:08) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.132777)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.024687)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000187)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+Completed in 0.16894 (5 reqs/sec) | Rendering: 0.00579 (3%) | DB: 0.15765 (93%) | 200 OK [http://localhost/category/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:42:13) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011046)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.001022)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000189)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001552)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000550)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.02907 (34 reqs/sec) | Rendering: 0.00940 (32%) | DB: 0.01436 (49%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:43:23) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.001276)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.001624)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000195)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+Completed in 0.01338 (74 reqs/sec) | Rendering: 0.00433 (32%) | DB: 0.00310 (23%) | 200 OK [http://localhost/category/list]
+
+
+Processing CategoryController#new (for 127.0.0.1 at 2009-06-20 11:43:40) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.010771)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendering  within layouts/application
+Rendering category/new
+Rendered category/_form (0.00169)
+Completed in 0.02289 (43 reqs/sec) | Rendering: 0.00589 (25%) | DB: 0.01077 (47%) | 200 OK [http://localhost/category/new]
+
+
+Processing CategoryController#create (for 127.0.0.1 at 2009-06-20 11:43:56) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Beverages"}, "action"=>"create", "controller"=>"category"}
+  [4;35;1mCategory Columns (0.001640)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000211)[0m   [0mINSERT INTO categories (`name`) VALUES('Beverages')[0m
+  [4;36;1mSQL (0.000806)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/category/list
+Completed in 0.01005 (99 reqs/sec) | DB: 0.00286 (28%) | 302 Found [http://localhost/category/create]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:43:56) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.001257)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000136)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+Completed in 0.01142 (87 reqs/sec) | Rendering: 0.00376 (32%) | DB: 0.00165 (14%) | 200 OK [http://localhost/category/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:44:08) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011480)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000313)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000199)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001687)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000390)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.03129 (31 reqs/sec) | Rendering: 0.00962 (30%) | DB: 0.01407 (44%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 11:44:14) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.011117)[0m   [0mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/application
+Rendering recipe/new
+  [4;36;1mCategory Load (0.000270)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001544)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01138)
+Completed in 0.03113 (32 reqs/sec) | Rendering: 0.01340 (43%) | DB: 0.01293 (41%) | 200 OK [http://localhost/recipe/new]
+
+
+Processing RecipeController#create (for 127.0.0.1 at 2009-06-20 11:44:41) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "action"=>"create", "recipe"=>{"title"=>"Beer", "category_id"=>"3", "description"=>"Beer", "instructions"=>"Hops\r\nYeast\r\nWater\r\nTime"}, "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.001827)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000129)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mINSERT INTO recipes (`title`, `date`, `category_id`, `description`, `instructions`) VALUES('Beer', '2009-06-20 11:44:41', 3, 'Beer', 'Hops\r\nYeast\r\nWater\r\nTime')[0m
+  [4;35;1mSQL (0.000703)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.00920 (108 reqs/sec) | DB: 0.00287 (31%) | 302 Found [http://localhost/recipe/create]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:44:41) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.001567)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000732)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000165)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001582)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.001266)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Load (0.000173)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.01969 (50 reqs/sec) | Rendering: 0.00884 (44%) | DB: 0.00549 (27%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:44:43) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "category_id"=>"2", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.010988)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000927)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000396)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001653)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000682)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Load (0.000201)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.03113 (32 reqs/sec) | Rendering: 0.01139 (36%) | DB: 0.01485 (47%) | 200 OK [http://localhost/recipe/list?category_id=2]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:44:45) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "category_id"=>"3", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.010916)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000877)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000226)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001389)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000367)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Load (0.000213)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.02979 (33 reqs/sec) | Rendering: 0.01063 (35%) | DB: 0.01399 (46%) | 200 OK [http://localhost/recipe/list?category_id=3]
+
+
+Processing RecipeController#destroy (for 127.0.0.1 at 2009-06-20 11:44:54) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"destroy", "id"=>"3", "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011156)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.001254)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 3) [0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Destroy (0.000273)[0m   [0m DELETE FROM recipes
+ WHERE `id` = 3
+[0m
+  [4;36;1mSQL (0.000943)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.02372 (42 reqs/sec) | DB: 0.01372 (57%) | 302 Found [http://localhost/recipe/destroy/3]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:44:54) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;35;1mRecipe Columns (0.001884)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000183)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001605)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000402)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.01937 (51 reqs/sec) | Rendering: 0.00943 (48%) | DB: 0.00429 (22%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:52:21) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000173)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011153)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000670)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000213)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001534)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000308)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.05112 (19 reqs/sec) | Rendering: 0.01283 (25%) | DB: 0.01405 (27%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:52:25) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011013)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.001139)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000180)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001243)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000395)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.08735 (11 reqs/sec) | Rendering: 0.06790 (77%) | DB: 0.01397 (15%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#index (for 127.0.0.1 at 2009-06-20 11:52:47) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011060)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000624)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000196)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering recipe/list
+  [4;36;1mCategory Columns (0.001317)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000284)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.05249 (19 reqs/sec) | Rendering: 0.01339 (25%) | DB: 0.01361 (25%) | 200 OK [http://localhost/recipe]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:53:02) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011001)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000290)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000163)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001622)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000316)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.08923 (11 reqs/sec) | Rendering: 0.00827 (9%) | DB: 0.01339 (15%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:53:03) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.001165)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.010015)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000222)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+Completed in 0.02347 (42 reqs/sec) | Rendering: 0.00530 (22%) | DB: 0.01140 (48%) | 200 OK [http://localhost/category/list]
+
+
+Processing CategoryController#destroy (for 127.0.0.1 at 2009-06-20 11:53:10) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.010717)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.001352)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 1) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Destroy (0.000295)[0m   [0m DELETE FROM categories
+ WHERE `id` = 1
+[0m
+  [4;36;1mSQL (0.000924)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/category/list
+Completed in 0.02165 (46 reqs/sec) | DB: 0.01340 (61%) | 302 Found [http://localhost/category/destroy/1]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:53:10) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.001290)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000308)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000135)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+Completed in 0.01006 (99 reqs/sec) | Rendering: 0.00294 (29%) | DB: 0.00173 (17%) | 200 OK [http://localhost/category/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:56:41) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011032)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000823)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000201)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001668)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000408)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.02960 (33 reqs/sec) | Rendering: 0.01032 (34%) | DB: 0.01413 (47%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:58:14) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000215)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.010977)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000216)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001376)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000313)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.05080 (19 reqs/sec) | Rendering: 0.01346 (26%) | DB: 0.01369 (26%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:59:38) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011068)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000490)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000200)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001533)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000260)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.05036 (19 reqs/sec) | Rendering: 0.01275 (25%) | DB: 0.01374 (27%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:59:41) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011222)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000570)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000211)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001786)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000369)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+Completed in 0.08670 (11 reqs/sec) | Rendering: 0.01003 (11%) | DB: 0.01416 (16%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#show (for 127.0.0.1 at 2009-06-20 11:59:48) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.184879)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.000339)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 2) [0m
+Rendering  within layouts/application
+Rendering recipe/show
+Completed in 0.19535 (5 reqs/sec) | Rendering: 0.00421 (2%) | DB: 0.18522 (94%) | 200 OK [http://localhost/recipe/show/2]
+
+
+Processing RecipeController#edit (for 127.0.0.1 at 2009-06-20 11:59:51) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.010981)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.000972)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 2) [0m
+Rendering  within layouts/application
+Rendering recipe/edit
+  [4;35;1mCategory Load (0.000257)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.001482)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01173)
+Completed in 0.03585 (27 reqs/sec) | Rendering: 0.01519 (42%) | DB: 0.01369 (38%) | 200 OK [http://localhost/recipe/edit/2]
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 12:01:01) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.010996)[0m   [0mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/application
+Rendering recipe/new
+  [4;36;1mCategory Load (0.000280)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001543)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01125)
+Completed in 0.03052 (32 reqs/sec) | Rendering: 0.01325 (43%) | DB: 0.01282 (42%) | 200 OK [http://localhost/recipe/new]
+
+
+Processing RecipeController#create (for 127.0.0.1 at 2009-06-20 12:01:39) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "action"=>"create", "recipe"=>{"title"=>"Ice Tea", "category_id"=>"3", "description"=>"Cold tea", "instructions"=>"Make tea\r\nAdd ice"}, "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011020)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000514)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000311)[0m   [0;1mINSERT INTO recipes (`title`, `date`, `category_id`, `description`, `instructions`) VALUES('Ice Tea', '2009-06-20 12:01:39', 3, 'Cold tea', 'Make tea\r\nAdd ice')[0m
+  [4;35;1mSQL (0.000830)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.02027 (49 reqs/sec) | DB: 0.01268 (62%) | 302 Found [http://localhost/recipe/create]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:01:39) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.001776)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000489)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000164)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001999)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000633)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Load (0.000171)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.01999 (50 reqs/sec) | Rendering: 0.00998 (49%) | DB: 0.00523 (26%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:09:26) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mSQL (0.000166)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011385)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000206)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001699)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000306)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Load (0.000188)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.05339 (18 reqs/sec) | Rendering: 0.01444 (27%) | DB: 0.01420 (26%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:10:04) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;35;1mRecipe Columns (0.010965)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.001073)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000250)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering recipe/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001580)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000389)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Load (0.000214)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.08989 (11 reqs/sec) | Rendering: 0.01156 (12%) | DB: 0.01447 (16%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:12:04) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+  [4;36;1mSQL (0.000168)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Load (0.000246)[0m   [0mSELECT * FROM recipes [0m
+Rendering  within layouts/application
+Rendering recipe/list
+  [4;36;1mRecipe Columns (0.011352)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Columns (0.001343)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mCategory Load (0.000481)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;35;1mCategory Load (0.000199)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.05204 (19 reqs/sec) | Rendering: 0.01521 (29%) | DB: 0.01379 (26%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:12:06) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "category_id"=>"3", "controller"=>"recipe"}
+  [4;36;1mRecipe Load (0.000458)[0m   [0;1mSELECT * FROM recipes WHERE (category_id = '3') [0m
+Rendering  within layouts/application
+Rendering recipe/list
+  [4;35;1mRecipe Columns (0.011452)[0m   [0mSHOW FIELDS FROM recipes[0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001575)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000815)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.08677 (11 reqs/sec) | Rendering: 0.01012 (11%) | DB: 0.01430 (16%) | 200 OK [http://localhost/recipe/list?category_id=3]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 12:12:21) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+  [4;36;1mRecipe Load (0.000277)[0m   [0;1mSELECT * FROM recipes [0m
+Rendering  within layouts/application
+Rendering recipe/list
+  [4;35;1mRecipe Columns (0.011055)[0m   [0mSHOW FIELDS FROM recipes[0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Columns (0.001648)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.000257)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 2) [0m
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+  [4;36;1mCategory Load (0.000190)[0m   [0;1mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+Completed in 0.02968 (33 reqs/sec) | Rendering: 0.01204 (40%) | DB: 0.01343 (45%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 12:12:40) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.010647)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000740)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000198)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+Completed in 0.02295 (43 reqs/sec) | Rendering: 0.00564 (24%) | DB: 0.01158 (50%) | 200 OK [http://localhost/category/list]
+
+
+Processing CategoryController#destroy (for 127.0.0.1 at 2009-06-20 12:12:44) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"destroy", "id"=>"3", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.010654)[0m   [0;1mSHOW FIELDS FROM categories[0m
+  [4;35;1mCategory Load (0.002444)[0m   [0mSELECT * FROM categories WHERE (categories.`id` = 3) [0m
+  [4;36;1mSQL (0.000308)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Destroy (0.000000)[0m   [0mMysql::Error: Cannot delete or update a parent row: a foreign key constraint fails (`cookbook2_development/recipes`, CONSTRAINT `fk_recipes_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)): DELETE FROM categories
+ WHERE `id` = 3
+[0m
+  [4;36;1mSQL (0.000520)[0m   [0;1mROLLBACK[0m
+
+
+ActiveRecord::StatementInvalid (Mysql::Error: Cannot delete or update a parent row: a foreign key constraint fails (`cookbook2_development/recipes`, CONSTRAINT `fk_recipes_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)):             DELETE FROM categories
+            WHERE `id` = 3
+):
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/connection_adapters/mysql_adapter.rb:243:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/connection_adapters/mysql_adapter.rb:258:in `update'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/connection_adapters/abstract/database_statements.rb:47:in `delete'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/base.rb:1561:in `destroy_without_callbacks'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/callbacks.rb:321:in `destroy_without_transactions'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/transactions.rb:125:in `destroy'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/connection_adapters/abstract/database_statements.rb:59:in `transaction'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/transactions.rb:95:in `transaction'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/transactions.rb:121:in `transaction'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record/transactions.rb:125:in `destroy'
+    /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:48:in `destroy'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /opt/local/bin/mongrel_rails:19:in `load'
+    /opt/local/bin/mongrel_rails:19
+
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing CategoryController#index (for 127.0.0.1 at 2009-06-20 12:15:45) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCategory Columns (0.001591)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000306)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000165)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/application
+Rendering category/list
+Completed in 0.34023 (2 reqs/sec) | Rendering: 0.00603 (1%) | DB: 0.00227 (0%) | 200 OK [http://localhost/category]
+
+
+Processing CategoryController#destroy (for 127.0.0.1 at 2009-06-20 12:15:49) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"destroy", "id"=>"3", "controller"=>"category"}
+  [4;36;1mRecipe Load (0.000429)[0m   [0;1mSELECT * FROM recipes WHERE (category_id = '3') [0m
+Redirected to http://localhost:3000/category/list
+Completed in 0.00786 (127 reqs/sec) | DB: 0.00043 (5%) | 302 Found [http://localhost/category/destroy/3]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 12:15:49) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.010675)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000756)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000219)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/application
+Rendering category/list
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+DEPRECATION WARNING: Passing :post as a link modifier is deprecated. Use :method => "post" instead. :post will be removed in Rails 2.0.  See http://www.rubyonrails.org/deprecation for details. (called from convert_options_to_javascript! at /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/url_helper.rb:331)
+Completed in 0.02231 (44 reqs/sec) | Rendering: 0.00476 (21%) | DB: 0.01165 (52%) | 200 OK [http://localhost/category/list]

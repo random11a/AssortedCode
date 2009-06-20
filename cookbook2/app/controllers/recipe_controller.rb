@@ -9,7 +9,12 @@ class RecipeController < ApplicationController
          :redirect_to => { :action => :list }
 
   def list
-    @recipe_pages, @recipes = paginate :recipes, :per_page => 10
+    if params[:category_id].nil?
+      @recipes = Recipe.find(:all) 
+    else 
+      @recipes = Recipe.find(:all, :conditions => ["category_id = ?", params[:category_id]]) 
+      params[:category_id] = nil 
+    end
   end
 
   def show
