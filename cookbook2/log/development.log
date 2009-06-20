@@ -82,3 +82,479 @@ Rendering  within layouts/recipe
 Rendering recipe/new
 Rendered recipe/_form (0.00328)
 Completed in 0.02194 (45 reqs/sec) | Rendering: 0.00663 (30%) | DB: 0.01093 (49%) | 200 OK [http://localhost/recipe/new]
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 11:07:29) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;36;1mSQL (0.000745)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.001865)[0m   [0mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipe
+Rendering recipe/new
+ERROR: compiling _run_rhtml_47app47views47recipe47_form46rhtml RAISED compile error
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ',', expecting '}'
+...bout.concat(( select{"recipe", "category_id", Category.find(...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ',', expecting '}'
+...elect{"recipe", "category_id", Category.find(:all).collect {...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ')', expecting '}'
+...collect {|c| [c.name, c.id] }) ).to_s); _erbout.concat "</p>...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:18: syntax error, unexpected kEND, expecting '}'
+Function body: def _run_rhtml_47app47views47recipe47_form46rhtml(local_assigns)
+form = local_assigns[:form]
+form_counter = local_assigns[:form_counter]
+_erbout = ''; _erbout.concat(( error_messages_for 'recipe' ).to_s); _erbout.concat "\n\n<!--[form:recipe]-->\n<p><label for=\"recipe_title\">Title</label><br/>\n"
+
+
+
+; _erbout.concat(( text_field 'recipe', 'title'  ).to_s); _erbout.concat "</p>\n\n<p><label for=\"recipe_category_id\">Category</label><br/>\n"
+
+
+; _erbout.concat(( select{"recipe", "category_id", Category.find(:all).collect {|c| [c.name, c.id] }) ).to_s); _erbout.concat "</p>\n\n<p><label for=\"recipe_description\">Description</label><br/>\n"
+
+
+; _erbout.concat(( text_field 'recipe', 'description'  ).to_s); _erbout.concat "</p>\n\n<p><label for=\"recipe_instructions\">Instructions</label><br/>\n"
+
+
+; _erbout.concat(( text_area 'recipe', 'instructions'  ).to_s); _erbout.concat "</p>\n<!--[eoform:recipe]-->\n\n"
+
+
+; _erbout
+end
+Backtrace: /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:18:in `compile_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:318:in `compile_and_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/new.rhtml:4:in `_run_rhtml_47app47views47recipe47new46rhtml'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:108:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/new.rhtml:3:in `_run_rhtml_47app47views47recipe47new46rhtml'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+/opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/opt/local/bin/mongrel_rails:19:in `load'
+/opt/local/bin/mongrel_rails:19
+
+
+ActionView::TemplateError (compile error
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ',', expecting '}'
+...bout.concat(( select{"recipe", "category_id", Category.find(...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ',', expecting '}'
+...elect{"recipe", "category_id", Category.find(:all).collect {...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:8: syntax error, unexpected ')', expecting '}'
+...collect {|c| [c.name, c.id] }) ).to_s); _erbout.concat "</p>...
+                              ^
+/Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:18: syntax error, unexpected kEND, expecting '}') on line #8 of app/views/recipe/_form.rhtml:
+5: <%= text_field 'recipe', 'title'  %></p>
+6: 
+7: <p><label for="recipe_category_id">Category</label><br/>
+8: <%= select{"recipe", "category_id", Category.find(:all).collect {|c| [c.name, c.id] }) %></p>
+9: 
+10: <p><label for="recipe_description">Description</label><br/>
+11: <%= text_field 'recipe', 'description'  %></p>
+
+    /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/_form.rhtml:18:in `compile_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:318:in `compile_and_render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:275:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:59:in `render_partial'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/partials.rb:58:in `render_partial'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:287:in `render'
+    /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/new.rhtml:4:in `_run_rhtml_47app47views47recipe47new46rhtml'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/views/recipe/new.rhtml:3:in `_run_rhtml_47app47views47recipe47new46rhtml'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:325:in `compile_and_render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:301:in `render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_view/base.rb:260:in `render_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:812:in `render_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:717:in `render_with_no_layout'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:50:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:1102:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:696:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:688:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/rescue.rb:83:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:435:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/filters.rb:684:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/session_management.rb:114:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/base.rb:334:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/dispatcher.rb:41:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /opt/local/bin/mongrel_rails:19:in `load'
+    /opt/local/bin/mongrel_rails:19
+
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 11:09:13) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;36;1mSQL (0.000157)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRecipe Columns (0.011099)[0m   [0mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipe
+Rendering recipe/new
+  [4;36;1mCategory Load (0.000239)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001193)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01253)
+Completed in 0.07762 (12 reqs/sec) | Rendering: 0.03820 (49%) | DB: 0.01269 (16%) | 200 OK [http://localhost/recipe/new]
+
+
+Processing RecipeController#create (for 127.0.0.1 at 2009-06-20 11:11:01) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "action"=>"create", "recipe"=>{"title"=>"Pizza", "category_id"=>"1", "description"=>"Yummy Pizza", "instructions"=>"1/2 lb pizza dough\r\n\r\netc."}, "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011149)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000440)[0m   [0;1mINSERT INTO recipes (`title`, `date`, `category_id`, `description`, `instructions`) VALUES('Pizza', '2009-06-20 11:11:01', 1, 'Yummy Pizza', '1/2 lb pizza dough\r\n\r\netc.')[0m
+  [4;35;1mSQL (0.000838)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.07798 (12 reqs/sec) | DB: 0.01254 (16%) | 302 Found [http://localhost/recipe/create]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:11:01) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.001990)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000213)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000178)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+Completed in 0.05652 (17 reqs/sec) | Rendering: 0.04814 (85%) | DB: 0.00238 (4%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#show (for 127.0.0.1 at 2009-06-20 11:11:15) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.011236)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.001206)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/show
+Completed in 0.05464 (18 reqs/sec) | Rendering: 0.03676 (67%) | DB: 0.01244 (22%) | 200 OK [http://localhost/recipe/show/1]
+
+
+Processing RecipeController#edit (for 127.0.0.1 at 2009-06-20 11:11:17) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.010897)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.001338)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/edit
+  [4;35;1mCategory Load (0.000270)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.001538)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01099)
+Completed in 0.05680 (17 reqs/sec) | Rendering: 0.03716 (65%) | DB: 0.01404 (24%) | 200 OK [http://localhost/recipe/edit/1]
+
+
+Processing CategoryController#create (for 127.0.0.1 at 2009-06-20 11:24:04) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"create", "controller"=>"category"}
+Redirected to http://localhost:3000/category/list
+Filter chain halted as [#<ActionController::Filters::ClassMethods::ProcFilter:0x32d5584 @filter=#<Proc:0x02408524@/opt/local/lib/ruby/gems/1.8/gems/actionpack-1.13.6/lib/action_controller/verification.rb:74>>] returned_false.
+Completed in 0.00104 (957 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/category/create]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:24:04) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.010775)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000757)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000214)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/category
+Rendering category/list
+Completed in 0.05299 (18 reqs/sec) | Rendering: 0.03496 (65%) | DB: 0.01175 (22%) | 200 OK [http://localhost/category/list]
+
+
+Processing CategoryController#new (for 127.0.0.1 at 2009-06-20 11:24:06) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"category"}
+  [4;36;1mCategory Columns (0.010898)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendering  within layouts/category
+Rendering category/new
+Rendered category/_form (0.00147)
+Completed in 0.02328 (42 reqs/sec) | Rendering: 0.00636 (27%) | DB: 0.01090 (46%) | 200 OK [http://localhost/category/new]
+
+
+Processing CategoryController#create (for 127.0.0.1 at 2009-06-20 11:24:18) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Main Courses"}, "action"=>"create", "controller"=>"category"}
+  [4;35;1mCategory Columns (0.010713)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000431)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000219)[0m   [0mINSERT INTO categories (`name`) VALUES('Main Courses')[0m
+  [4;36;1mSQL (0.000895)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/category/list
+Completed in 0.02148 (46 reqs/sec) | DB: 0.01226 (57%) | 302 Found [http://localhost/category/create]
+
+
+Processing CategoryController#list (for 127.0.0.1 at 2009-06-20 11:24:18) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"category"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/category_controller.rb:12)
+  [4;35;1mCategory Columns (0.001646)[0m   [0mSHOW FIELDS FROM categories[0m
+  [4;36;1mSQL (0.000285)[0m   [0;1mSELECT count(*) AS count_all FROM categories [0m
+  [4;35;1mCategory Load (0.000151)[0m   [0mSELECT * FROM categories LIMIT 0, 10[0m
+Rendering  within layouts/category
+Rendering category/list
+Completed in 0.01126 (88 reqs/sec) | Rendering: 0.00304 (27%) | DB: 0.00208 (18%) | 200 OK [http://localhost/category/list]
+
+
+Processing RecipeController#index (for 127.0.0.1 at 2009-06-20 11:24:22) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"index", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011222)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000979)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000193)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/recipe
+Rendering recipe/list
+Completed in 0.02171 (46 reqs/sec) | Rendering: 0.00384 (17%) | DB: 0.01239 (57%) | 200 OK [http://localhost/recipe]
+
+
+Processing RecipeController#edit (for 127.0.0.1 at 2009-06-20 11:24:28) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.011411)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.001133)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/edit
+  [4;35;1mCategory Load (0.000266)[0m   [0mSELECT * FROM categories [0m
+  [4;36;1mCategory Columns (0.001568)[0m   [0;1mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01131)
+Completed in 0.03305 (30 reqs/sec) | Rendering: 0.01269 (38%) | DB: 0.01438 (43%) | 200 OK [http://localhost/recipe/edit/1]
+
+
+Processing RecipeController#update (for 127.0.0.1 at 2009-06-20 11:24:32) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"1", "recipe"=>{"title"=>"Pizza", "category_id"=>"2", "description"=>"Yummy Pizza", "instructions"=>"1/2 lb pizza dough\r\n\r\netc."}, "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.011102)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.001007)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mRecipe Update (0.000364)[0m   [0;1mUPDATE recipes SET `title` = 'Pizza', `category_id` = 2, `instructions` = '1/2 lb pizza dough\r\n\r\netc.', `description` = 'Yummy Pizza', `date` = '2009-06-20 11:24:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000922)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/show/1
+Completed in 0.02139 (46 reqs/sec) | DB: 0.01349 (63%) | 302 Found [http://localhost/recipe/update/1]
+
+
+Processing RecipeController#show (for 127.0.0.1 at 2009-06-20 11:24:32) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.002150)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.000420)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/show
+Completed in 0.01125 (88 reqs/sec) | Rendering: 0.00362 (32%) | DB: 0.00257 (22%) | 200 OK [http://localhost/recipe/show/1]
+
+
+Processing RecipeController#update (for 127.0.0.1 at 2009-06-20 11:24:33) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Edit", "action"=>"update", "id"=>"1", "recipe"=>{"title"=>"Pizza", "category_id"=>"2", "description"=>"Yummy Pizza", "instructions"=>"1/2 lb pizza dough\r\n\r\netc."}, "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.001826)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.000320)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+  [4;36;1mSQL (0.000064)[0m   [0;1mBEGIN[0m
+  [4;35;1mRecipe Update (0.000203)[0m   [0mUPDATE recipes SET `title` = 'Pizza', `category_id` = 2, `instructions` = '1/2 lb pizza dough\r\n\r\netc.', `description` = 'Yummy Pizza', `date` = '2009-06-20 11:24:33' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/show/1
+Completed in 0.00896 (111 reqs/sec) | DB: 0.00250 (27%) | 302 Found [http://localhost/recipe/update/1]
+
+
+Processing RecipeController#show (for 127.0.0.1 at 2009-06-20 11:24:33) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.002117)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.001140)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/show
+Completed in 0.01173 (85 reqs/sec) | Rendering: 0.00352 (30%) | DB: 0.00326 (27%) | 200 OK [http://localhost/recipe/show/1]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:24:36) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;35;1mRecipe Columns (0.011277)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mSQL (0.000947)[0m   [0;1mSELECT count(*) AS count_all FROM recipes [0m
+  [4;35;1mRecipe Load (0.000192)[0m   [0mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+Completed in 0.02195 (45 reqs/sec) | Rendering: 0.00352 (16%) | DB: 0.01242 (56%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#show (for 127.0.0.1 at 2009-06-20 11:24:46) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011219)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.001305)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/show
+Completed in 0.02147 (46 reqs/sec) | Rendering: 0.00334 (15%) | DB: 0.01252 (58%) | 200 OK [http://localhost/recipe/show/1]
+
+
+Processing RecipeController#edit (for 127.0.0.1 at 2009-06-20 11:24:49) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011921)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mRecipe Load (0.001300)[0m   [0mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+Rendering  within layouts/recipe
+Rendering recipe/edit
+  [4;36;1mCategory Load (0.000236)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001569)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01057)
+Completed in 0.03231 (30 reqs/sec) | Rendering: 0.01193 (36%) | DB: 0.01503 (46%) | 200 OK [http://localhost/recipe/edit/1]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:24:55) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.011058)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000652)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000198)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+Completed in 0.02097 (47 reqs/sec) | Rendering: 0.00408 (19%) | DB: 0.01191 (56%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#destroy (for 127.0.0.1 at 2009-06-20 11:24:58) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.012367)[0m   [0mSHOW FIELDS FROM recipes[0m
+  [4;36;1mRecipe Load (0.000923)[0m   [0;1mSELECT * FROM recipes WHERE (recipes.`id` = 1) [0m
+  [4;35;1mSQL (0.000079)[0m   [0mBEGIN[0m
+  [4;36;1mRecipe Destroy (0.000191)[0m   [0;1m DELETE FROM recipes
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000880)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.02295 (43 reqs/sec) | DB: 0.01444 (62%) | 302 Found [http://localhost/recipe/destroy/1]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:24:58) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.001862)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000325)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000142)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+Completed in 0.00877 (114 reqs/sec) | Rendering: 0.00148 (16%) | DB: 0.00233 (26%) | 200 OK [http://localhost/recipe/list]
+
+
+Processing RecipeController#new (for 127.0.0.1 at 2009-06-20 11:25:00) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"new", "controller"=>"recipe"}
+  [4;35;1mRecipe Columns (0.011110)[0m   [0mSHOW FIELDS FROM recipes[0m
+Rendering  within layouts/recipe
+Rendering recipe/new
+  [4;36;1mCategory Load (0.000294)[0m   [0;1mSELECT * FROM categories [0m
+  [4;35;1mCategory Columns (0.001625)[0m   [0mSHOW FIELDS FROM categories[0m
+Rendered recipe/_form (0.01126)
+Completed in 0.03012 (33 reqs/sec) | Rendering: 0.01229 (40%) | DB: 0.01303 (43%) | 200 OK [http://localhost/recipe/new]
+
+
+Processing RecipeController#create (for 127.0.0.1 at 2009-06-20 11:25:18) [POST]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"commit"=>"Create", "action"=>"create", "recipe"=>{"title"=>"Pizza", "category_id"=>"2", "description"=>"Yummy Pizza", "instructions"=>"1/2 lb pizza dough\r\n.\r\n.\r\n."}, "controller"=>"recipe"}
+  [4;36;1mRecipe Columns (0.011192)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000960)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mINSERT INTO recipes (`title`, `date`, `category_id`, `description`, `instructions`) VALUES('Pizza', '2009-06-20 11:25:18', 2, 'Yummy Pizza', '1/2 lb pizza dough\r\n.\r\n.\r\n.')[0m
+  [4;35;1mSQL (0.000972)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/recipe/list
+Completed in 0.02257 (44 reqs/sec) | DB: 0.01338 (59%) | 302 Found [http://localhost/recipe/create]
+
+
+Processing RecipeController#list (for 127.0.0.1 at 2009-06-20 11:25:18) [GET]
+  Session ID: f1029d1467ea9e6af094af61e00f8a2f
+  Parameters: {"action"=>"list", "controller"=>"recipe"}
+DEPRECATION WARNING: paginate is deprecated and will be removed from Rails 2.0 (Pagination is moving to a plugin in Rails 2.0: script/plugin install svn://errtheblog.com/svn/plugins/classic_pagination)  See http://www.rubyonrails.org/deprecation for details. (called from list at /Users/brendanr/Documents/Work/whitepages/hw/rubytut/repo/AssortedCode/cookbook2/app/controllers/recipe_controller.rb:12)
+  [4;36;1mRecipe Columns (0.001447)[0m   [0;1mSHOW FIELDS FROM recipes[0m
+  [4;35;1mSQL (0.000442)[0m   [0mSELECT count(*) AS count_all FROM recipes [0m
+  [4;36;1mRecipe Load (0.000153)[0m   [0;1mSELECT * FROM recipes LIMIT 0, 10[0m
+Rendering  within layouts/recipe
+Rendering recipe/list
+Completed in 0.00932 (107 reqs/sec) | Rendering: 0.00274 (29%) | DB: 0.00204 (21%) | 200 OK [http://localhost/recipe/list]

@@ -22,6 +22,7 @@ class RecipeController < ApplicationController
 
   def create
     @recipe = Recipe.new(params[:recipe])
+    @recipe.date = Time.now
     if @recipe.save
       flash[:notice] = 'Recipe was successfully created.'
       redirect_to :action => 'list'
@@ -36,6 +37,7 @@ class RecipeController < ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
+    @recipe.date = Time.now
     if @recipe.update_attributes(params[:recipe])
       flash[:notice] = 'Recipe was successfully updated.'
       redirect_to :action => 'show', :id => @recipe
