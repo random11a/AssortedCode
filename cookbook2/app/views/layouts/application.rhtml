@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Online Cookbook</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+	<h1>Online Cookbook</h1>
+	
+	<p style="color: green"><%= flash[:notice] %></p>
+	
+	<%= yield  %>
+	
+	<p><% if params[:controller] == 'recipe' %> 
+		<%= link_to "Create new recipe", :controller => "recipe", :action => "new" %> 
+		<% else %> 
+		<%= link_to "Create new category", :controller => "category", :action => "new" %> 
+		<% end %> 
+		
+		<%= link_to "Show all recipes", :controller => "recipe", :action => "list" %> 
+		<%= link_to "Show all categories", :controller => "category", :action => "list" %></p> 
+
+</body>
+</html>
