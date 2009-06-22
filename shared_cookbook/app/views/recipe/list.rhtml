@@ -1,0 +1,22 @@
+<table border="1"> 
+  <tr> 
+    <th width="55%"><em>Recipe</em</th> 
+    <th width="15%"><em>Category</em></th> 
+    <th width="15%"><em>User</em></th>
+    <th width="15%"><em>Date</em</th> 
+  </tr> 
+ 
+<% for recipe in @recipes %> 
+  <tr> 
+    <td><%= link_to %Q{#{recipe.title}}, :action => 'show', :id => recipe %> 
+        <%= link_to '(delete)', { :action => 'destroy', :id => recipe }, 
+                               
+  :confirm => 'Are you sure?', :post => true %></td> 
+    <td><%= link_to %Q{#{recipe.category.name}}, 
+                   {:action => 'list', :category_id => recipe.category.id} %></td>
+    <td><%= link_to %Q{#{recipe.user.name}}, 
+                   {:action => 'list', :user_id => recipe.user.id} %></td>
+    <td><%=h recipe.date %></td> 
+  </tr> 
+<% end %> 
+</table>

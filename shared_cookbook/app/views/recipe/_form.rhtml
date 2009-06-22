@@ -1,0 +1,16 @@
+<%= error_messages_for 'recipe' %>
+
+<!--[form:recipe]-->
+<p><label for="recipe_title">Title</label><br/>
+<%= text_field 'recipe', 'title'  %></p>
+
+<p><label for="recipe_category_id">Category</label><br/> 
+<%= select("recipe", "category_id", Category.find(:all).collect {|c| [c.name, c.id] }) %></p>
+
+<p><label for="recipe_description">Description</label><br/>
+<%= text_field 'recipe', 'description'  %></p>
+
+<p><label for="recipe_instructions">Instructions</label><br/>
+<%= text_area 'recipe', 'instructions'  %></p>
+<!--[eoform:recipe]-->
+
